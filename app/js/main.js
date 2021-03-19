@@ -5,4 +5,6 @@ $(function name(params) {
     dots: true,
   });
 
+
+  var Mixer = mixitup('.products-top__content');
 })

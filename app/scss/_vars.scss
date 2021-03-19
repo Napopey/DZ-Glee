@@ -25,5 +25,12 @@
 
 $title: #1f2044;
 $accent: #436372;
+$bg: #fef7f0;
 
+@function max($numbers...) {
+  @return m#{a}x(#{numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{numbers});
+}
 

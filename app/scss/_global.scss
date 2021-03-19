@@ -27,3 +27,30 @@ body{
   padding: 0 15px;
   margin: 0 auto;
 }
+.title{
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 36px;
+  display: flex;justify-content: center;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.btn{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  @extend %dmsans-700;
+  color: $accent;
+  font-size: 16px;
+  margin-bottom: 75px;
+  & + .btn{
+    margin-left: 20px;
+  }
+    .mixitup-control-active{
+      color: #000;
+    }
+}
+
+
