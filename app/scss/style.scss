@@ -282,6 +282,56 @@
     margin: 0 20px 20px 0;
     width: 270px;
     height: 390px;
+    &:hover .products-top__fon{
+      opacity: 1;
+    }
+  }
+  &__fon{
+    transition: all 0.5s;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    opacity: 0;
+  }
+  &__link-search{
+    background-image: url(../images/icons/search-products.svg);
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-position: center center;
+    &:hover{
+      background-color: #a3bbc8;
+      background-image: url(../images/icons/search-products-1.svg);
+    }
+  }
+  &__link-basket{
+    background-image: url(../images/icons/basket-products.svg);
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-position: center center;
+    margin: 0 25px;
+    &:hover{
+      background-color: #a3bbc8;
+      background-image: url(../images/icons/basket-products-1.svg);
+    }
+  }
+  &__link-like{
+    background-image: url(../images/icons/like-products.svg);
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-position: center center;
+    &:hover{
+      background-color: #a3bbc8;
+      background-image: url(../images/icons/like-products-1.svg);
+    }
   }
   &__img{
     padding-bottom: 65px;
@@ -301,6 +351,7 @@
 }
 
 .products-bottom{
+  margin-bottom: 100px;
   &__items{
     display: flex;
     justify-content: space-between;
@@ -359,10 +410,139 @@
     border: 1px solid #b3b7b5;
     border-radius: 5px;
     max-width: 180px;
+    &:hover{
+      background: #b3b7b5;
+      color: #fff;
+    }
   }
   &__link-img{
     padding-left: 45px;
   }
+}
+
+.design{
+  margin-bottom: 120px;
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    margin: 0 auto;
+    max-width: 370px;
+    width: 100%;
+    height: 245px;
+    margin-bottom: 30px;
+  }
+  &__title{
+    font-size: 20px;
+    line-height: 26px;
+    @extend %dmsans-700;
+    color: black;
+    max-width: 180px;
+    margin-bottom: 15px;
+    padding: 40px 0 0 35px;
+  }
+  &__text{
+    font-size: 16px;
+    @extend %dmsans-700;
+    padding-left: 35px;
+  }
+  .mixitup-control-active{
+    color: black;
+  }  
+}
+
+.company{
+  position: relative;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  &__title{
+    justify-content: flex-start;
+  }
+  &__link{
+    display: flex;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: black;
+    align-items: center;
+    &::after{
+      content: '';
+      background-image: url(../images/view-all.svg);
+      background-repeat: no-repeat;
+      height: 12px;
+      width: 8px;
+      margin-left: 15px;
+    }
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 365px;
+  }
+  &__item{
+    height: 420px;
+    max-width: 370px;
+    widows: 100%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+  }
+  &__span{
+    position: absolute;
+    font-size: 14px;
+    @extend %dmsans-700;
+    color: #fff;
+    background-color: #a3bbc8;
+    padding: 10px 30px;
+    border-radius: 100px;
+    text-transform: uppercase; 
+    top: 227px;
+    left: 25px;
+  }
+  &__item-bottom{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #000;
+    left: 35px;
+  }
+  &__text{
+    padding: 35px 0 18px;
+    margin: 0 auto;
+    max-width: 300px;
+    font-size: 18px;
+    @extend %dmsans-500;
+    color: #262626;
+  }
+  &__subtext{
+    @extend %rubik-400;
+    text-transform: uppercase;
+    color: black;
+    padding: 20px 35px 20px 0;
+  }
+  &__bottom-subtext{
+    padding-right: 110px;
+  }
+  
+}
+.clients{
+  background-color: $bg;
+  height: 440px;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  top: 365px;
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 340px;
+  }
+
 }
 
 
@@ -376,7 +556,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 110px;
 }
+
+
 
 
 

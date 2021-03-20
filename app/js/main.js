@@ -7,4 +7,5 @@ $(function name(params) {
 
 
   var Mixer = mixitup('.products-top__content');
+  var Mixer = mixitup('.design__content');
 })
