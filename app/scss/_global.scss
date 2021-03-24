@@ -31,7 +31,8 @@ body{
   @extend %dmsans-700;
   font-size: 36px;
   line-height: 36px;
-  display: flex;justify-content: center;
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
   color: #000;
 }
@@ -53,4 +54,33 @@ body{
     }
 }
 
+.breadcrumbs{
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    color: #727272;
+    padding-right: 20px;
+    position: relative;
+    &::after{
+      content: "/";
+      position: absolute;
+      width: 9px;
+      height: 10px;
+      top: 1px;
+      right: 5px;
+    }
+    &:last-child{
+      color: #000;
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+  }
+}
 
