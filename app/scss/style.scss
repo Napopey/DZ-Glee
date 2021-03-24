@@ -491,6 +491,9 @@
     justify-content: space-between;
     padding-bottom: 365px;
   }
+  &__items-terms{
+    padding-bottom: 250px;
+  }
   &__item{
     height: 420px;
     max-width: 370px;
@@ -619,6 +622,30 @@
       background-color: #a3bbc8;
       color: #fff;
     }
+  }
+}
+
+.content{
+  padding: 100px 0 45px;
+  @extend %rubik-400;
+  font-size: 16px;
+  color: #243f4d;
+  &__title{
+    font-size: 24px;
+    @extend %rubik-500;
+    color: #243f4d;
+    margin-bottom: 20px;
+  }
+  ul.content__list{
+    list-style: decimal-leading-zero;
+    margin-bottom: 70px;
+    padding-left: 30px;
+  }
+  &__item{
+    margin-bottom: 25px;
+  }
+  &__text{
+    margin-bottom: 70px;
   }
 }
 
