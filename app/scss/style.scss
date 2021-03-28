@@ -294,6 +294,10 @@
     &:hover .products-top__fon{
       opacity: 1;
     }
+    &.products-top__item--list{
+      width: 100%;
+      flex-direction: inherit;
+    }
   }
   &__fon{
     transition: all 0.5s;
@@ -859,10 +863,7 @@
       }
     }
   }
-
 }
-
-
 
 .video-inner{
   background-image: url('../images/bg-video.jpg');
@@ -875,6 +876,223 @@
   justify-content: center;
   margin-bottom: 110px;
 }
+
+
+.shop{
+  padding: 115px 0 120px;
+  color: #243f4d;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .products-top{
+      &__wrapper{
+        margin-left: 55px;
+      }
+      &__item{
+          &--link{
+        text-transform: uppercase;
+        font-size: 15px;
+        color: #fff;
+        padding: 15px 50px;
+        background-color: #a3bbc8;
+        border-radius: 5px;
+        color: #fff;
+       }
+      }
+      &__item--list{
+      margin-bottom: 40px;
+      background-color: transparent;
+      box-shadow: none;
+      height: 500px;
+      margin-right: 0;
+      padding: 0;
+      }
+      &__img--list{
+        height: 500px;
+        width: 370px;
+        object-fit: contain;
+        border: 1px solid #f2f2f2;
+        padding: 70px 20px 80px 25px;
+      }
+      &__fon--list{
+        display: none;
+      }
+      &__title--list{
+        font-size: 40px;
+        margin-bottom: 25px;
+      }
+      &__money--list{
+        margin: 35px 0;
+        display: block;
+        font-size: 30px;
+      }
+      &__text{
+        max-width: 340px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+  .shop-content__inner--list{
+    margin-bottom: 35px;
+  }
+  .filters{
+    min-width: 270px;
+    margin-right: 30px;
+  }
+  .filter__item{
+    text-align: left;
+    margin-bottom: 60px;
+  }
+  .filter__title{
+    @extend %dmsans-700;
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    &::after{
+      content: "";
+      position: absolute;
+      margin-left: 15px;
+      height: 3px;
+      width: 40px;
+      background-color: #a3bbc8;
+      top: 8px;
+    }
+  }
+}
+.irs--flat .irs-min, .irs--flat .irs-max{
+  display: none;
+}
+.irs--flat .irs-line {
+    top: 13px;
+    height: 3px;
+    background-color: #c2d2db;
+    border-radius: 0;
+}
+.irs--flat .irs-bar {
+    top: 12px;
+    height: 4px;
+    background-color: #a3bbc8;
+}
+.irs--flat .irs-handle {
+    top: 7px;
+    width: 15px;
+    height: 15px;
+    background-color: #a3bbc8;
+}
+.irs--flat .irs-handle>i:first-child{
+  display: none;
+}
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single{
+  display: none;
+}
+.filter-price__box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-brand{
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-brand__checkbox{
+      background-color: #edf1f4;
+      height: 40px;
+      border-radius: 5px;
+      .filter-brand__number{
+        color: #243f4d;
+      }
+    }
+  }
+  &__checkbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  &__number{
+    color: #b3b3b3;
+  }
+}
+.filter-recent{
+  &__item{
+    height: 70px;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__title{
+    color: #243f4d;
+  }
+  &__box{
+    height: 70px;
+    width: 70px;
+    border: 1px solid #f2f2f2;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  &__pendant{
+    background-image: url('../images/products/products-bottom/3.png');
+  }
+  &__lamp{
+    background-image: url('../images/products/products-bottom/1.png');
+  }
+  &__mallesuda{
+    background-image: url('../images/products/products-bottom/2.png');
+  }
+  &__content{
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+.jq-ry-container{
+  padding: 0;
+}
+
+.shop-content{
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 110px;
+  }
+}
+
+.filter-category{
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-category__checkbox{
+      background-color: #edf1f4;
+      height: 40px;
+      border-radius: 5px;
+    }
+  }
+   &__checkbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 16px;
+    position: relative;
+  }
+  &__text::after{
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/angle-rigth.svg');
+    background-repeat: no-repeat;
+    height: 10px;
+    width: 5px;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+
+
+
 
 
 

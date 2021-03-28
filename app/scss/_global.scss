@@ -84,3 +84,34 @@ body{
   }
 }
 
+.pagination{
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__list--list{
+    display: flex;
+    justify-content:start;    
+    margin-left: 40px;
+   }
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+  }
+  &__next{
+    width: 75px;
+  }
+  &__link{
+    border: 1px solid #a3bbc8;
+    color: #000;
+    padding: 13px 21px;
+    font-size: 16px;
+    &--active{
+      background-color: #a3bbc8;
+      color: #fff;
+    }
+  }
+}
+
