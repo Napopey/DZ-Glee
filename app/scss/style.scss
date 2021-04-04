@@ -956,21 +956,23 @@
     text-align: left;
     margin-bottom: 60px;
   }
-  .filter__title{
-    @extend %dmsans-700;
-    font-size: 18px;
-    position: relative;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    &::after{
-      content: "";
-      position: absolute;
-      margin-left: 15px;
-      height: 3px;
-      width: 40px;
-      background-color: #a3bbc8;
-      top: 8px;
-    }
+}
+.filter__title{
+  @extend %dmsans-700;
+  font-size: 18px;
+  position: relative;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 10px;
+  &::after{
+    content: "";
+    position: absolute;
+    margin-left: 15px;
+    height: 3px;
+    width: 40px;
+    background-color: #a3bbc8;
+    top: 8px;
   }
 }
 .irs--flat .irs-min, .irs--flat .irs-max{
@@ -1326,6 +1328,155 @@
 }
 
 
+.blog{
+  &__inner{
+    padding: 120px 0 70px;
+    display: flex;
+  }
+  &__content{
+    margin-right: 65px;
+  }
+  &__aside{
+    width: 270px;
+  }
+  &__item{
+    width: 830px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  &__item-box{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    width: 270px;
+    background-color: #a3bbc8;
+    color: #fff;
+    font-size: 12px;
+    bottom: 252px;
+  }
+  &__item-date{
+    margin-right: 25px;
+    position: relative;
+    margin-left: 20px;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/calendar.svg');
+      background-position: center center;
+      background-size: cover;
+      width: 15px;
+      height: 15px;
+      left: -20px;
+    }
+  }
+  &__item-admin{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/user.svg');
+      width: 15px;
+      height: 15px;
+      background-position: center center;
+      left: -20px;
+      background-size: cover;
+    }
+  }
+  &__item-title{
+    margin: 40px 0 30px;
+    font-size: 36px;
+    @extend %rubik-400;
+    color: $title;
+    display: block;
+  }
+  &__item-text{
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  &__item-link{
+    @extend %button;
+    border-radius: 0;
+    color: #a3bbc8;
+  }
+  .pagination__list{
+    justify-content: start;
+    margin-left: -10px;
+    margin-bottom: 120px;
+  }
+}
+
+.filter-search{
+  margin-bottom: 60px;
+  &__form{
+    display: flex;
+    position: relative;
+  }
+  &__input{
+    width: 270px;
+    height: 42px;
+    border: 2px solid #edf1f4;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 60px 0 10px;
+  }
+  &__btn{
+    height: 42px;
+    width: 47px;
+    border: none;
+    border-radius: 5px;
+    background-color: #edf1f4;
+    position: absolute;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.filter__item-category{
+  margin-bottom: 45px;
+}
+
+.blog-filter{
+  &__item{
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__img{
+    min-width: 70px;
+    margin-right: 20px;
+    img{
+      min-width: 70px;
+      height: 70px;
+      object-fit: cover;
+    }
+  }
+  &__title{
+    font-size: 14px;
+    color: $title;
+    margin-bottom: 10px;
+    display: block;
+  }
+  &__text{
+    color: #c9c9c9;
+    position: relative;
+    padding-left: 20px;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 15px;
+      background-image: url('../images/icons/calendar-gray.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      left: 0;
+    }
+  }
+
+}
 
 
 

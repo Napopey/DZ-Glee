@@ -63,3 +63,20 @@ $about:#243f4d;
   cursor: pointer;
 }
 
+%button{
+    display: flex;
+    color: #436372;
+    background-color: transparent;
+    padding: 20px;
+    border: 1px solid #b3b7b5;
+    border-radius: 5px;
+    max-width: 180px;
+    &:hover{
+      background: #b3b7b5;
+      color: #fff;
+    }
+    &__link-img{
+      padding-left: 45px;
+    }
+  }
+
