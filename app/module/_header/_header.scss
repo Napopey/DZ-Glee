@@ -3,20 +3,25 @@
   justify-content: space-between;
   padding: 50px 0 55px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.menu__list{
-  display: flex;
-  @extend %rubik-500;
-  font-size: 15px;
-  &-item + .menu__list-item{
-    margin-left: 30px;
+.menu{
+  &__list{
+    display: flex;
+    @extend %rubik-500;
+    font-size: 15px;
+    &-item + .menu__list-item{
+      margin-left: 30px;
+    }
+    &-link{
+      color:$accent;
+    }
   }
-  &-link{
-    color:$accent;
+  &__btn{
+    display: none;
   }
 }
-
 .user__nav{
   display: flex;
   align-items: center;
@@ -46,7 +51,7 @@
     position: absolute;
     content: '';
     background-color: #fcd7b6;
-    width: 150px;
+    width: 140px;
     height: 50px;
     border-radius: 100px;
     top: -14px;
@@ -91,10 +96,82 @@
   }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 980px){
   .menu{
-    &__list{
-      display: none;
+    order: 1;
+    margin-left: 20px;
+   &__list{
+     position: absolute;
+     top: 100px;
+     width: 100%;
+     left: 0;
+     flex-direction: column;
+     align-items: center;
+     transform: translateY(-200%);
+     transition: all .3s;
+     background-color: #fff;
+     z-index: 5;
+      &-item + .menu__list-item{
+      margin-left: 0;
+      margin-top: 15px;
     }
+    }
+    &__list-item:hover{
+      a{
+        color: red;
+      }
+    }
+    &__list--active{
+      transform: translateY(0);
+    }
+    &__btn{
+     width: 30px;
+     height: 22px;
+     border: none;
+     background-color: transparent;
+     display: flex;
+     align-items: center;
+     position: relative;
+     padding: 0;
+     span{
+       height: 3px;
+       width: 100%;
+       background-color: #000;
+     }
+     &::before,
+     &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #000;
+     }
+     &::before{
+       top: 0;
+     }
+     &::after{
+       bottom: 0;
+     }
+    }
+  }
+  .user__nav{
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 570px){
+  .menu{
+    order: 0;
+  }
+  .user__nav{
+    width: 100%;
+    margin-top: 30px;
+    justify-content: flex-end;
+  }
+ 
+}
+@media (max-width: 360px){
+   .user__nav-wrapper{
+    margin: 0;
   }
 }
