@@ -1,0 +1,91 @@
+.company{
+  position: relative;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  &__title{
+    justify-content: flex-start;
+  }
+  &__link{
+    display: flex;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: black;
+    align-items: center;
+    &::after{
+      content: '';
+      background-image: url(../images/view-all.svg);
+      background-repeat: no-repeat;
+      height: 12px;
+      width: 8px;
+      margin-left: 15px;
+    }
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 250px;
+  }
+
+  &__item{
+    height: 420px;
+    max-width: 370px;
+    widows: 100%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+  }
+  &__span{
+    position: absolute;
+    font-size: 14px;
+    @extend %dmsans-700;
+    color: #fff;
+    background-color: #a3bbc8;
+    padding: 10px 30px;
+    border-radius: 100px;
+    text-transform: uppercase; 
+    top: 227px;
+    left: 25px;
+  }
+  &__item-bottom{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #000;
+    left: 35px;
+  }
+  &__text{
+    padding: 35px 0 18px;
+    margin: 0 auto;
+    max-width: 300px;
+    font-size: 18px;
+    @extend %dmsans-500;
+    color: #262626;
+  }
+  &__subtext{
+    @extend %rubik-400;
+    text-transform: uppercase;
+    color: black;
+    padding: 20px 35px 20px 0;
+  }
+  &__bottom-subtext{
+    padding-right: 110px;
+  }
+}
+.clients{
+  background-color: $bg;
+  height: 440px;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  top: 365px;
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 340px;
+  }
+}
