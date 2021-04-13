@@ -13,6 +13,7 @@
   }
 }
 
+
 .clients-modal{
   position: static;
   height: 250px;
@@ -57,7 +58,7 @@
   }
   &__link{
     color: $accent;
-    margin-left: 185px;
+    margin-left: 180px;
   }
 
   &__linkregister{
@@ -324,10 +325,21 @@
 .shop{
   padding: 115px 0 120px;
   color: #243f4d;
+  &__filters-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $accent;
+    position: fixed;
+    right: 12px;
+    bottom: 20px;
+    display: none;
+    z-index: 100;
+  }
   &__inner{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start;  
     .products-top{
       &__wrapper{
         margin-left: 55px;
@@ -364,6 +376,7 @@
       &__title--list{
         font-size: 40px;
         margin-bottom: 25px;
+        line-height: 52px;
       }
       &__money--list{
         margin: 35px 0;
@@ -556,6 +569,7 @@
   &__title{
     font-size: 40px;
     margin-bottom: 25px;
+    line-height: 52px;
   }
   &__price{
     margin: 35px 0;
@@ -846,7 +860,7 @@
     position: relative;
   }
   &__input{
-    width: 270px;
+    max-width: 270px;
     height: 42px;
     border: 2px solid #edf1f4;
     border-radius: 5px;
@@ -913,6 +927,7 @@
   border-bottom: 1px solid #ebebeb;
  h2{
     font-size: 36px;
+    line-height: 40px;
     color: $title;
     margin-bottom: 25px;
     @extend %rubik-400;
